@@ -3,7 +3,9 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import glucoseRoutes from './routes/glucoseRoutes.js';
 import { notfound, errorHandler } from "./middleware/errorMiddleware.js";
+
 
 dotenv.config();
 
@@ -14,6 +16,8 @@ app.use(express.json());
 
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/glucose", glucoseRoutes);
+
 
 app.use(notfound);
 app.use(errorHandler);
