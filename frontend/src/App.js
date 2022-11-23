@@ -16,7 +16,6 @@ import NotificationsScreen from "./screens/NotificationsScreen";
 import GlucoseScreen from "./screens/GlucoseScreen";
 import PhysicalScreen from "./screens/PhysicalScreen";
 import dietScreen from "./screens/dietScreen";
-import MentalScreen from "./screens/MentalScreen";
 
 
 const App = () => {
@@ -32,7 +31,6 @@ const App = () => {
           <Route path="/glucose" component={GlucoseScreen} exact />
           <Route path="/physical-activity" component={PhysicalScreen} exact />
           <Route path="/diet" component={dietScreen} exact />
-          <Route path="/mental" component={MentalScreen} exact />
 
 
 
