@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
 
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { createGlucose } from '../actions/glucoseActions';
 import axios from 'axios';
+import ReactSpeedometer from "react-d3-speedometer"
+
 
 function GlucoseScreen() {
    const [isLoading, setLoading] = useState(false);
@@ -32,7 +34,7 @@ function GlucoseScreen() {
 
   const [loading, setIsLoading] = useState(false)
     const handleClick = async() => {
-    await axios.post("/api/glucose", {name: 'nsanzimana gilbert', qty: 4})
+    await axios.post("/api/glucose", {type: 'glucose', qty: qty})
   
   };
   return (
@@ -56,6 +58,11 @@ function GlucoseScreen() {
     >
       {isLoading ? 'Submitting...' : 'Submit'}
     </Button>
+    <Row>
+            <div id='chartContainer'>
+                <ReactSpeedometer maxValue={250} minValue={0} value={70} segments={1}/>
+            </div>
+          </Row>
     </Container>
   )
 }
