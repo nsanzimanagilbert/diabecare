@@ -9,16 +9,15 @@ function LandingPage() {
           <div className="col-12 col-lg-8 textBox">
             {/* <p className="smallText">Hi there ! my name is</p> */}
             <h1 style={{color:"white"}}>
-              Diabecare <br></br>
+              Diacheck <br></br>
               
             </h1>
             <h2 className="smallText">
-            Self-care and routine check-ups/ investigations for early identification of the complications of diabetes mellitus.
+            Keep your diabetes in check !
             </h2>
             <a
-              href="#"
+              href="/login"
               className="link"
-              target="_blank"
               rel="noreferrer"
               
             >

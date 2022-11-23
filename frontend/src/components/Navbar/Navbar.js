@@ -5,7 +5,7 @@ function Navbar() {
 		<nav className='navbar fixed-top navbar-expand-lg navbar-light bg-light' style={{padding:"5px"}}>
 			<div className='container-fluid'>
 				<a className='navbar-brand' href='/'>
-					Diabecare
+					Diacheck
 				</a>
 				<button
 					className='navbar-toggler'

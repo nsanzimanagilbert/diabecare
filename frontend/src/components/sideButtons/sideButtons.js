@@ -1,8 +1,8 @@
 import "./sideButtons.css";
 import GitHub from "../../img/icons/Mail.svg";
-import LinkedIn from "../../img/icons/LinkedIn.svg";
-import Mail from "../../img/icons/Mail.svg";
-import Dev from "../../img/icons/Dev.svg";
+import LinkedIn from "../../img/icons/twitter.svg";
+import Mail from "../../img/icons/call.svg";
+import Dev from "../../img/icons/insta.svg";
 import Codechef from "../../img/icons/Mail.svg";
 import UpArrow from "../../img/icons/UpArrow.svg";
 import DownArrow from "../../img/icons/DownArrow.svg";

@@ -10,9 +10,7 @@ function About() {
         <div className="col-12">
           <h4 className="mainHeading">About us</h4>
           <h4 className="smallText">
-          Strict glycaemic control, as well as routine monitoring, is a core component for preventing as well as early identification of micro as well as macrovascular complication among patients with diabetes mellitus(DM).
-Self-care mobile application is needed which includes alerts for necessary investigation (HbA1c, fundoscopy, etc.) for the status of glycaemic control and early identification of DM complications.
-
+         To provide a one-stop solution for diabetic patients which can help them to take care and be precautious while ensuring proper healthcare.
           </h4>
         </div>
        

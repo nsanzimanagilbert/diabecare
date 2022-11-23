@@ -2,7 +2,7 @@ import "./features.css";
 function FeatureCard(props) {
   return (
     <div className="col-12 col-md-4 my-3 my-md-0">
-      <div className=" otherProjectCard">
+      <div className=" otherProjectCard" style={{height:"310px"}}>
         <div className="imgContainer">
           <img src={props.image} alt="project"></img>
         </div>{" "}

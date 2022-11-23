@@ -1,8 +1,8 @@
 import "./features.css";
 import FeatureCard from "./featureCard";
-import academics from "../../img/feature.png";
-import event from "../../img/feature.png";
-import ecart from "../../img/feature.png";
+import academics from "../../assets/gluco.png";
+import yoga from "../../assets/warrior.jpg";
+import ecart from "../../assets/diet.jpg";
 
 function Features() {
   return (
@@ -14,30 +14,31 @@ function Features() {
         <FeatureCard
           title={"Gluco Tracking"}
           intro={
-            "Strict glycaemic control, as well as routine monitoring, is a core component for preventing as well as early identification of micro as well as macrovascular complication among patients with diabetes mellitus(DM)"
+            "Record and Monitor blod glucose levels"
           }
           githubLink={"https://github.com/tusharjain0022/GeekNote-academics"}
           siteLink={"https://geeknote-academics.netlify.app/"}
           image={academics}
         ></FeatureCard>
         <FeatureCard
-          title={"Gluco Tracking"}
+          title={"Yoga AI Traininer"}
           intro={
-            "Strict glycaemic control, as well as routine monitoring, is a core component for preventing as well as early identification of micro as well as macrovascular complication among patients with diabetes mellitus(DM)"
+            "Exercise routines and workout suggestions. Check your training via AI trainer which checks your yoga pose and detect the calories burnt"
           }
           githubLink={"https://github.com/tusharjain0022/GeekNote-academics"}
           siteLink={"https://geeknote-academics.netlify.app/"}
-          image={academics}
+          image={yoga}
         ></FeatureCard>
          <FeatureCard
-          title={"Gluco Tracking"}
+          title={"Diet Monitoring"}
           intro={
-            "Strict glycaemic control, as well as routine monitoring, is a core component for preventing as well as early identification of micro as well as macrovascular complication among patients with diabetes mellitus(DM)"
+            "Diet plans and suggestions for healthy food recipes. Log and track  meals with glycemic index"
           }
           githubLink={"https://github.com/tusharjain0022/GeekNote-academics"}
           siteLink={"https://geeknote-academics.netlify.app/"}
-          image={academics}
+          image={ecart}
         ></FeatureCard>
+        
       </div>
     </div>
   );

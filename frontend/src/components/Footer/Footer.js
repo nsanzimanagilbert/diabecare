@@ -9,7 +9,7 @@ function Footer() {
           <div className="col-12 text-center contactSection">
             <h4 className="mainHeading">Connect with us</h4>
             <h4 className="smallText px-md-5 mx-md-5">
-              You can reach to me via E-Mail or on LinkedIn or via any other
+              You can reach to us via E-Mail or on Call or via any other
               platforms link provided.
             </h4>
             <a
@@ -28,7 +28,7 @@ function Footer() {
               rel="noreferrer"
             >
               {" "}
-              <p className="readButton mx-md-2">LinkedIn</p>
+              <p className="readButton mx-md-2">Phone : 211-2000-103</p>
             </a>
           </div>
         </div>
