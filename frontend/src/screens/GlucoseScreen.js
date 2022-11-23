@@ -78,6 +78,13 @@ function GlucoseScreen() {
         maxValue={315}
     value={qty}
     currentValueText="Glucose Level"
+    segmentColors={[
+      "#F1CA44",
+      "#92F656",
+      "#DAEB36",
+      "#EA4335",
+      "#FE0002",
+    ]}
     customSegmentLabels={[
       {
         text: "Very Low",
