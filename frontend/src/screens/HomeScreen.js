@@ -41,19 +41,21 @@ const HomeScreen = () => {
       cover: `image`
     }
   ]
-
   return (
     <Container className="page-wrapper">
-      <h2>welcome</h2>
+      <h2 style={{margin:"40px",textTransform:"none"}}>Keep your diabetes in check!</h2>
       {loading ? 
         <Loader/>
        : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <div className="flex flex-center">
-          {products.map((product) => (
+        <div className="container" style={{marginTop:"40px"}}>
+          <div className="row">
+            {products.map((product) => (
             <Product key={product._id} product={product} />
           ))}
+          </div>
+          
         </div>
       )}
     </Container>
