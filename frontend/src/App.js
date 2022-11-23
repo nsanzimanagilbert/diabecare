@@ -16,6 +16,7 @@ import NotificationsScreen from "./screens/NotificationsScreen";
 import GlucoseScreen from "./screens/GlucoseScreen";
 import PhysicalScreen from "./screens/PhysicalScreen";
 import dietScreen from "./screens/dietScreen";
+import RecordsScreen from "./screens/RecordsScreen";
 
 const App = () => {
   return (
@@ -37,7 +38,7 @@ const App = () => {
           <Route path="/profile" component={ProfileScreen} exact />
 
           <Route path="/service/:id" component={ProductScreen} />
-          <Route path="/records/:id?" component={CartScreen} />
+          <Route path="/records/:id?" component={RecordsScreen} />
           <Route path="/" component={HomeScreen} exact />
           <Route path="/dashboard" component={DashboardScreen} exact />
 

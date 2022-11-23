@@ -7,9 +7,10 @@ const getAllGlucose = asyncHandler(async (req, res) => {
 });
 
 const createGlucose = asyncHandler(async (req, res) => {
-  const { name, qty } = req.body;
+  const { user, name, qty } = req.body;
 
   const glucose = await Glucose.create({
+    user,
     name,
     qty
   });
@@ -17,6 +18,7 @@ const createGlucose = asyncHandler(async (req, res) => {
     res.status(201).json({
       _id: glucose._id,
       name: glucose.name,
+      qty: glucose.qty
 
     });
   } else {

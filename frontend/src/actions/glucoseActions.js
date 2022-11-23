@@ -2,7 +2,10 @@ import axios from "axios";
 import {
   GLUCOSE_LIST_REQUEST,
   GLUCOSE_LIST_SUCCESSS,
-  GLUCOSE_LIST_FAIL
+  GLUCOSE_LIST_FAIL,
+  GLUCOSE_CREATE_REQUEST,
+  GLUCOSE_CREATE_SUCCESS,
+  GLUCOSE_CREATE_FAIL
 } from "../constants/glucoseConstants";
 
 export const listAllGlucose = () => async (dispatch) => {
@@ -27,7 +30,7 @@ export const listAllGlucose = () => async (dispatch) => {
 export const createGlucose = (name, email, password) => async (dispatch) => {
   try {
     dispatch({
-      type: USER_REGISTER_REQUEST,
+      type: GLUCOSE_CREATE_REQUEST,
     });
     const config = {
       headers: {
@@ -35,24 +38,17 @@ export const createGlucose = (name, email, password) => async (dispatch) => {
       },
     };
     const { data } = await axios.post(
-      "/api/users",
-      { name, email, password },
+      "/api/glucose",
+      { name, qty },
       config
     );
     dispatch({
-      type: USER_REGISTER_SUCCESS,
+      type: GLUCOSE_CREATE_SUCCESS,
       payload: data,
     });
-
-    //Login in the user right after registering
-    dispatch({
-      type: USER_LOGIN_SUCCESS,
-      payload: data,
-    });
-    localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
-      type: USER_REGISTER_FAIL,
+      type: GLUCOSE_CREATE_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

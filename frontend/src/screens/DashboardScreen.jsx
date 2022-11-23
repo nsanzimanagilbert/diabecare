@@ -1,15 +1,12 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-
+import Highcharts from 'highcharts'
 import { CircularProgressbar, CircularProgressbarWithChildren,  } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-
-
-
 function DashboardScreen() {
+ 
 
-  
   return (
     <Container>
         <h1>Monitor your health status</h1>
@@ -33,6 +30,9 @@ function DashboardScreen() {
               <strong>67</strong> Ml/g
             </div>
           </CircularProgressbarWithChildren>
+          <Row>
+            <div id='chartContainer'></div>
+          </Row>
       </div>
     </Container>
   )
