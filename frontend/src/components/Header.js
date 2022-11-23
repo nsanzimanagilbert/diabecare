@@ -50,13 +50,13 @@ const Header = () => {
               </div>
             )}
       <nav expand="lg"  className="main-nav" style={{display: isOpen ?  "block" : "none" , width:"200px"}}>
-        
+
         <div className="nav-items-container flex flex-c">
           <Link to="/">
             <Navbar.Brand className="branding">
               {/* <Image src={logo.source} alt={product.description} fluid /> */}
-              <h2>DiaCheck</h2> 
-             
+              <h2>DiaCheck</h2>
+
             </Navbar.Brand>
           </Link>
           <div className="nav-items flex flex-c flex-end">
@@ -73,7 +73,10 @@ const Header = () => {
              <Link to="/physical-activity" className="nav-link">
                 <FaRunning/> Physical Activity
              </Link>
-          
+             <Link to="/physical-activity" className="nav-link">
+                <FaBrain/> Mental Health
+
+             </Link>
              <Link to="/notifications" className="nav-link">
              <GoDashboard/> Notifications
              </Link>
@@ -84,12 +87,12 @@ const Header = () => {
               {" "}
                 <IoMdVideocam/> Call Expert
             </Nav.Link>
-            
+
             </div>
-            
+
           </div>
          </div>
-        
+
       </nav>
     </header>
   );
