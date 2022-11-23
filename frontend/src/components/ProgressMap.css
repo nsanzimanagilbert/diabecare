@@ -1,0 +1,21 @@
+.react-calendar-heatmap .color-github-0 {
+    fill: #f3f3f3;
+  }
+  .react-calendar-heatmap .color-github-1 {
+    fill: #fdc70c;
+  }
+  .react-calendar-heatmap .color-github-2 {
+    fill: #f3903f;
+  }
+  .react-calendar-heatmap .color-github-3 {
+    fill: #ed683c;
+  }
+  .react-calendar-heatmap .color-github-4 {
+    fill: #E23744;
+  }
+
+  .react-calendar-heatmap{
+    font-size: 50%;
+    width:95%;
+    height:30vh;
+  }
