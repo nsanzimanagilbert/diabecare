@@ -17,6 +17,8 @@ import GlucoseScreen from "./screens/GlucoseScreen";
 import PhysicalScreen from "./screens/PhysicalScreen";
 import dietScreen from "./screens/dietScreen";
 import YogaTraining from "./screens/YogaTraining";
+import RecordsScreen from "./screens/RecordsScreen";
+
 
 const App = () => {
   return (
@@ -34,7 +36,7 @@ const App = () => {
           <Route path="/register" component={RegisterScreen} exact />
           <Route path="/profile" component={ProfileScreen} exact />
           <Route path="/service/:id" component={ProductScreen} />
-          <Route path="/records/:id?" component={CartScreen} />
+          <Route path="/records/:id?" component={RecordsScreen} />
           <Route path="/" component={HomeScreen} exact />
           <Route path="/dashboard" component={DashboardScreen} exact />
           <Route path="/yoga-training/:pose" component={YogaTraining} exact />
