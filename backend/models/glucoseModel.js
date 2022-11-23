@@ -2,19 +2,18 @@ import mongoose from "mongoose";
 
 const glucoseSechema = mongoose.Schema(
   {
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: "User",
+    type: {
+      type: String
     },
     name: {
-      type: String,
-      required: true,
-
+      type: String
     },
     qty: {
-      type: String,
+      type: Number,
       required: true
+    },
+    period:{
+      type: String
     }
   },
   {

@@ -53,11 +53,8 @@ const Header = () => {
         
         <div className="nav-items-container flex flex-c">
           <Link to="/">
-            <Navbar.Brand className="branding">
-              {/* <Image src={logo.source} alt={product.description} fluid /> */}
-              <h2>DiaCheck</h2> 
-             
-            </Navbar.Brand>
+
+            <h2 style={{color:"white"}}>DiaCheck</h2> 
           </Link>
           <div className="nav-items flex flex-c flex-end">
             <div className="links-container">
