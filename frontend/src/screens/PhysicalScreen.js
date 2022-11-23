@@ -50,10 +50,6 @@ const PhysicalScreen = () => {
                   <button>Start Session</button>
                 </div>
                 </Link>
-
-              
-
-
               </div>
 
               <div className="mt-3 scrolling d-flex">
