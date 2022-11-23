@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header >
       <div className="top_nav">
-        <AiOutlineBars onClick={toggle}/>
+        <AiOutlineBars onClick={toggle} style={{float:"left"}}/>
         </div>
         {userInfo ? ( <div className="person-nav">
               <NavDropdown title={userInfo.name} id="username">
