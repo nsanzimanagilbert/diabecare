@@ -41,7 +41,6 @@ const HomeScreen = () => {
       cover: `image`
     }
   ]
-
   return (
     <Container className="page-wrapper">
       <h2>welcome</h2>
