@@ -48,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tensorflow/tfjs-converter": "^4.1.0",
+    "@tensorflow/tfjs-core": "^4.1.0"
   }
 }

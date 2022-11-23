@@ -7,10 +7,15 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { createGlucose } from '../actions/glucoseActions';
 import axios from 'axios';
+import Font, {Text} from 'react-font'
+import { FaPlus, FaMinus } from 'react-icons/fa';
+import Card from 'react-bootstrap/Card';
+import ReactSpeedometer from "react-d3-speedometer"
+
 
 function GlucoseScreen() {
    const [isLoading, setLoading] = useState(false);
-   const [qty, setQty] = useState(30);
+   const [qty, setQty] = useState(75);
    const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,39 +28,88 @@ function GlucoseScreen() {
 
 
   const handleIncrement = () =>{
-    setQty( (qty)=> Number( qty + 1))
+    setQty( (qty)=> Number( qty + 50))
   }
   const handleDecrement = () =>{
-    setQty( (qty)=> Number( qty - 1))
+    setQty( (qty)=> Number( qty - 50))
     
   }
 
   const [loading, setIsLoading] = useState(false)
     const handleClick = async() => {
-    await axios.post("/api/glucose", {name: 'nsanzimana gilbert', qty: 4})
+    await axios.post("/api/glucose", {name: 'nsanzimana gilbert', qty: qty})
   
   };
   return (
     <Container>
       <div className='pageHeader'>
-      <h3>
-
-      Monitor You Glucose levels
-      </h3>
+        <h3>Monitor You Glucose levels</h3>
       </div>
+      <div className='col-12' style={{
+        alignItems: 'center',
+      }}>
+        <Card style={{ width: '18rem' }} className="mb-5">
+          <form>
+          <Card.Body>
+            <InputGroup className="mb-3 glucose-form">
+              <Button className='rounded-circle' variant="danger" onClick={handleDecrement}><FaMinus/></Button>
+                <Form.Control className='glucose-input' value={`${qty} Mg/Dl`} font-Family='Viga'/>        
+              <Button className='rounded-circle' variant="success" onClick={handleIncrement}><FaPlus/></Button>
+            </InputGroup>
 
-      <InputGroup className="mb-3 glucose-form">
-        <Button className='btn btn-minus' variant="outline-secondary" onClick={handleDecrement}>-</Button>
-        <Form.Control className='glucose-input' value={`${qty} Mg/Dl`}/>
-        <Button className='btn btn-plus' variant="outline-secondary" onClick={handleIncrement}>+</Button>
-      </InputGroup>
-      <Button
-      variant="primary"
-      disabled={isLoading}
-      onClick={!isLoading ? handleClick : null}
-    >
-      {isLoading ? 'Submitting...' : 'Submit'}
-    </Button>
+            <Button
+              variant="info"
+              className="rounded-circle"
+              disabled={isLoading}
+              buttonStyle={{borderRadius: 60}}
+              onClick={!isLoading ? handleClick : null}
+              type="submit"
+              >
+              {isLoading ? 'Submitting...' : 'Submit'}
+            </Button>
+          </Card.Body>
+          </form>
+          
+        </Card>
+
+        <ReactSpeedometer 
+        className="mt-5"
+        minValue={0}
+        maxValue={315}
+    value={qty}
+    currentValueText="Glucose Level"
+    customSegmentLabels={[
+      {
+        text: "Very Low",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Normal",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Border Line",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "High",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+      {
+        text: "Very High",
+        position: "OUTSIDE",
+        color: "#555",
+      },
+    ]}
+  />
+
+        
+      </div>
+        
     </Container>
   )
 }
