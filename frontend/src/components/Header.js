@@ -30,7 +30,8 @@ const Header = () => {
   return (
     <header >
       <div className="top_nav">
-        <AiOutlineBars onClick={toggle}/>
+        <AiOutlineBars onClick={toggle} style={{float:"left"}}/>
+        <Link to="/"><h2 style={{color:"white",float:"left",margin:"5px 15px"}}>DiaCheck</h2> </Link>
         </div>
         {userInfo ? ( <div className="person-nav">
               <NavDropdown title={userInfo.name} id="username">
@@ -52,15 +53,13 @@ const Header = () => {
       <nav expand="lg"  className="main-nav" style={{display: isOpen ?  "block" : "none" , width:"200px"}}>
         
         <div className="nav-items-container flex flex-c">
-          <Link to="/">
+          {/* <Link to="/">
 
             <h2 style={{color:"white"}}>DiaCheck</h2> 
-          </Link>
+          </Link> */}
           <div className="nav-items flex flex-c flex-end">
             <div className="links-container">
-             <Link to="/dashboard" className="nav-link">
-             <GoDashboard/> Dashboard
-             </Link>
+             
             <Link to='/diet' className="nav-link">
               <GiHotMeal/> Diet
             </Link>
