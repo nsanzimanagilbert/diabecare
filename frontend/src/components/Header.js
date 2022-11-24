@@ -117,6 +117,7 @@ const Header = () => {
              <FaFileMedicalAlt/> My Records
              </Link>
             <Link to="/call" className="nav-link">
+            <AiOutlineWechat/> Doc Chat
             </Link>
             {/* <Link to="/diabetestest" className="nav-link">
             <MdBloodtype/>Diabetes Test
