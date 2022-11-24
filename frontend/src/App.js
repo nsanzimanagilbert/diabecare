@@ -18,6 +18,8 @@ import PhysicalScreen from "./screens/PhysicalScreen";
 import dietScreen from "./screens/dietScreen";
 import YogaTraining from "./screens/YogaTraining";
 import RecordsScreen from "./screens/RecordsScreen";
+import RecipeDB from './components/recipeDB';
+import Recipes from './components/Recipes/projects'
 
 
 const App = () => {
@@ -39,6 +41,8 @@ const App = () => {
           <Route path="/records/:id?" component={RecordsScreen} />
           <Route path="/" component={HomeScreen} exact />
           <Route path="/dashboard" component={DashboardScreen} exact />
+          <Route path="/recipedb" component={RecipeDB} exact />
+          <Route path="/recipes" component={Recipes} exact />
           <Route path="/yoga-training/:pose" component={YogaTraining} exact />
 
 
