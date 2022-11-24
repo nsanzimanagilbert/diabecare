@@ -177,3 +177,49 @@ header{
 .glucose-input{
  
 }
+
+
+/* -------------Table CSS start---------------------- */
+
+table {
+  width: 100%;
+  padding: 1em;
+  margin: 20px 0;
+  border-collapse: collapse;
+  box-shadow: 0 1px 2px 0 #c6e8c9;
+}
+
+thead {
+  background-color: #caf0ec;
+  font-size: 16px;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  background-color: 1px solid #ffffff;
+  color: #14877c;
+}
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr {
+  height: 50px;
+}
+
+tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.search input {
+  width: 40%;
+  min-width: 200px;
+  border-radius: 10px;
+  border: 2px solid #14877c;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* ------------------Table CSS End--------------- */
