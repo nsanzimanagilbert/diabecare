@@ -18,6 +18,7 @@ import PhysicalScreen from "./screens/PhysicalScreen";
 import dietScreen from "./screens/dietScreen";
 import YogaTraining from "./screens/YogaTraining";
 import RecordsScreen from "./screens/RecordsScreen";
+import MentalScreen from "./screens/MentalScreen";
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/" component={HomeScreen} exact />
           <Route path="/dashboard" component={DashboardScreen} exact />
           <Route path="/yoga-training/:pose" component={YogaTraining} exact />
+          <Route path="/mental" component={MentalScreen} exact />
 
 
         </main>

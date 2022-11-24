@@ -3,6 +3,16 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Highcharts from 'highcharts'
 import { CircularProgressbar, CircularProgressbarWithChildren,  } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import HighchartsReact from 'highcharts-react-official'
+
+const options = {
+  title: {
+    text: 'My chart'
+  },
+  series: [{
+    data: [1, 2, 3]
+  }]
+}
 
 function DashboardScreen() {
  
@@ -32,8 +42,31 @@ function DashboardScreen() {
           </CircularProgressbarWithChildren>
           <Row>
             <div id='chartContainer'></div>
+            
           </Row>
-      </div>
+        </div>
+        <div className="col-12">
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={options}
+              />
+        </div>  
+        <div className="row">
+              
+          <div className="col-6">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  options={options}
+                />
+          </div> 
+          <div className="col-6 flex">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  options={options}
+                />
+          </div> 
+        </div> 
+
     </Container>
   )
 }

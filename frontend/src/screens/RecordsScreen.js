@@ -6,6 +6,9 @@ import { Container } from 'react-bootstrap';
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import CardGroup from 'react-bootstrap/CardGroup';
+import { format } from 'date-fns'
 
 const RecordsScreen = () => {
     const dispatch = useDispatch();
@@ -29,9 +32,8 @@ const RecordsScreen = () => {
     <Container>
         <div className='pageHeader'>
             <h3>The Records...</h3>
-            {glucose.map((record)=>{ return <div>
-                <p>{record.qty}</p>
-                <p>{record.createdAt}</p>
+            <CardGroup>
+            {glucose.map((record)=>{ return <div className=''>
                 <Card style={{ width: '18rem' }}>
                   <Card.Body>
                     <Card.Title>{record.qty}</Card.Title>
@@ -41,9 +43,10 @@ const RecordsScreen = () => {
                   </Card.Body>
                   
                 </Card>
-            </div>               
+            </div>  
+                         
 
-            })}
+            })}</CardGroup>
         </div>
         <div className="col-12">
         <HighchartsReact

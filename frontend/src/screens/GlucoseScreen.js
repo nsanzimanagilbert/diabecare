@@ -8,9 +8,10 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { createGlucose } from '../actions/glucoseActions';
 import axios from 'axios';
 import Font, {Text} from 'react-font'
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { FaPlus, FaMinus, FaPlusCircle } from 'react-icons/fa';
 import Card from 'react-bootstrap/Card';
-import ReactSpeedometer from "react-d3-speedometer"
+import ReactSpeedometer from "react-d3-speedometer";
+import MedicineRecord from '../components/MedicineRecord';
 
 
 function GlucoseScreen() {
@@ -40,14 +41,15 @@ function GlucoseScreen() {
     await axios.post("/api/glucose", {name: 'nsanzimana gilbert', qty: qty})
   
   };
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <Container>
       <div className='pageHeader'>
         <h3>Monitor You Glucose levels</h3>
       </div>
-      <div className='col-12' style={{
-        alignItems: 'center',
-      }}>
+      <div className='row'> 
+        <div className="col-6">
         <Card style={{ width: '18rem' }} className="mb-5">
           <form>
           <Card.Body>
@@ -72,50 +74,103 @@ function GlucoseScreen() {
           
         </Card>
 
+        </div>
+
+        <div className="col-6">        
+        
         <ReactSpeedometer 
-        className="mt-5"
-        minValue={0}
-        maxValue={315}
-    value={qty}
-    currentValueText="Glucose Level"
-    segmentColors={[
-      "#F1CA44",
-      "#92F656",
-      "#DAEB36",
-      "#EA4335",
-      "#FE0002",
-    ]}
-    customSegmentLabels={[
-      {
-        text: "Very Low",
-        position: "OUTSIDE",
-        color: "#555",
-      },
-      {
-        text: "Normal",
-        position: "OUTSIDE",
-        color: "#555",
-      },
-      {
-        text: "Border Line",
-        position: "OUTSIDE",
-        color: "#555",
-      },
-      {
-        text: "High",
-        position: "OUTSIDE",
-        color: "#555",
-      },
-      {
-        text: "Very High",
-        position: "OUTSIDE",
-        color: "#555",
-      },
-    ]}
-  />
+          className="mt-5"
+          minValue={0}
+          maxValue={315}
+          value={qty}
+          currentValueText="Glucose Level"
+          segmentColors={[
+            "#F1CA44",
+            "#92F656",
+            "#DAEB36",
+            "#EA4335",
+            "#FE0002",
+          ]}
+          customSegmentLabels={[
+            {
+              text: "Very Low",
+              position: "OUTSIDE",
+              color: "#555",
+            },
+            {
+              text: "Normal",
+              position: "OUTSIDE",
+              color: "#555",
+            },
+            {
+              text: "Border Line",
+              position: "OUTSIDE",
+              color: "#555",
+            },
+            {
+              text: "High",
+              position: "OUTSIDE",
+              color: "#555",
+            },
+            {
+              text: "Very High",
+              position: "OUTSIDE",
+              color: "#555",
+            },
+          ]}
+        />
+        </div>
 
         
       </div>
+
+      <div className="row">
+        <div className="col-6">
+          <Card className="mb-1" style={{ height: '50%'}}>
+            <Card.Header>
+              <Text style={{ fontWeight: "bold"}} className='mb-0'>Add Your Medications</Text>
+            </Card.Header>
+            <Card.Body>
+              <MedicineRecord/>             
+            </Card.Body>          
+          </Card>
+        </div>
+
+        <div className="col-6">
+          <Card className="mb-1" style={{ height: '50%'}}>
+            <Card.Header>
+              <Text style={{ fontWeight: "bold"}} className='mb-0'>How are you feeling?</Text>
+            </Card.Header>
+            <Card.Body className='flex'>
+           
+              <h3>&#129298;</h3>         
+              <h3>&#128577;</h3>         
+              <h3>&#128528;</h3>  
+              <h3>&#128512;</h3>  
+              <h3>&#128513;</h3>           
+              
+            </Card.Body>          
+          </Card>
+        </div>
+
+        <div className='col-12'>
+        <Card className="mb-5 mt-0" style={{ height: '50%'}}>
+            <Card.Header>
+              <Text style={{ fontWeight: "bold"}} className='mb-0'>Comment</Text>
+            </Card.Header>
+            <Card.Body >           
+            <Form.Group className="mx-3" controlId="exampleForm.ControlTextarea1">
+              {/* <Form.Label>Comments</Form.Label> */}
+              <Form.Control as="textarea" rows={3} placeholder="leave your comment here....."/>
+            </Form.Group>
+            </Card.Body>          
+          </Card>
+        
+        </div>     
+        
+
+      </div>
+
         
     </Container>
   )

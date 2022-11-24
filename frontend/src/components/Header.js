@@ -7,7 +7,7 @@ import { Navbar, Nav, Container, NavDropdown, Image } from "react-bootstrap";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import { logout } from "../actions/userActions";
-import {FaFileMedicalAlt, FaRunning} from 'react-icons/fa'
+import {FaFileMedicalAlt, FaRunning, FaBrain} from 'react-icons/fa'
 import {AiOutlineBars} from 'react-icons/ai'
 import {MdFoodBank, MdBloodtype} from 'react-icons/md'
 import { GoDashboard} from 'react-icons/go'
@@ -70,7 +70,9 @@ const Header = () => {
              <Link to="/physical-activity" className="nav-link">
                 <FaRunning/> Physical Activity
              </Link>
-          
+             <Link to="/mental" className="nav-link">
+                <FaBrain/> Mental Health
+             </Link>
              <Link to="/notifications" className="nav-link">
              <GoDashboard/> Notifications
              </Link>
