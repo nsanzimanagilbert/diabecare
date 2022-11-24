@@ -3,6 +3,7 @@ import FeatureCard from "./featureCard";
 import academics from "../../assets/gluco.png";
 import yoga from "../../assets/warrior.jpg";
 import ecart from "../../assets/diet.jpg";
+import React from 'react'
 
 function Features() {
   return (

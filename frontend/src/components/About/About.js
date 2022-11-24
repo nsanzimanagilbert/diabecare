@@ -1,3 +1,4 @@
+import React from 'react'
 import "./About.css";
 import connector from "../../img/connector.svg";
 // import connector from "../../img/"

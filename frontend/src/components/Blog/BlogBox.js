@@ -1,5 +1,6 @@
 import "./Blog.css";
 import tushar from "../../img/TusharIcon.png";
+import React from 'react'
 
 function BlogBox(props) {
   return (
