@@ -47,16 +47,13 @@ const dietScreen = () => {
                             <h4>Diabetic Recipes</h4>
                             <p>description</p>
                           </div>
-                          
                         </Link>
                       </div>
                       </div> 
           </div>
-          
->>>>>>> 0336bcebf372bd6e4db5e79d53982e4b045b0c12
         </div>
 
-
+      <br/>
       <h2>Find Glycemic Index</h2>
       <GlycemicTable/>
     

@@ -18,7 +18,7 @@ const tableHead = {
 };
 
 const GlycemicTable = () => {
-  const countPerPage = 15;
+  const countPerPage = 7;
   const [value, setValue] = React.useState("");
   const [currentPage, setCurrentPage] = React.useState(1);
   const [collection, setCollection] = React.useState(
@@ -76,7 +76,7 @@ const GlycemicTable = () => {
     <>
       <div className="search" >
         <input
-          placeholder="Find Glycemic Index..."
+          placeholder="Find Food Item..."
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />

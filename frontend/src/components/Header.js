@@ -8,7 +8,7 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import { logout } from "../actions/userActions";
 import {FaFileMedicalAlt, FaRunning} from 'react-icons/fa'
-import {AiOutlineBars} from 'react-icons/ai'
+import {AiOutlineBars ,AiOutlineWechat} from 'react-icons/ai'
 import {MdFoodBank, MdBloodtype} from 'react-icons/md'
 import { GoDashboard} from 'react-icons/go'
 import {GiHotMeal} from 'react-icons/gi'
@@ -76,10 +76,15 @@ const Header = () => {
              <Link to="/records" className="nav-link">
              <FaFileMedicalAlt/> My Records
              </Link>
-            <Nav.Link href="/records">
-              {" "}
+            <Link to="/call" className="nav-link">
                 <IoMdVideocam/> Call Expert
-            </Nav.Link>
+            </Link>
+            <Link to="/call" className="nav-link">
+                <AiOutlineWechat/> Doc Chat
+            </Link>
+            {/* <Link to="/diabetestest" className="nav-link">
+            <MdBloodtype/>Diabetes Test
+            </Link> */}
             
             </div>
             
