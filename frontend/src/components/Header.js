@@ -25,47 +25,7 @@ const Header = () => {
   };
 
   const [isOpen, setIsOpen] = useState(true)
-  const toggle = ()=> setIsOpen(!isOpen)
-
-  Highcharts.chart('container', {
-    chart: {
-        type: 'line'
-    },
-    title: {
-        text: 'Monthly Average Temperature'
-    },
-    subtitle: {
-        text: 'Source: ' +
-            '<a href="https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature" ' +
-            'target="_blank">Wikipedia.com</a>'
-    },
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
-    yAxis: {
-        title: {
-            text: 'Temperature (°C)'
-        }
-    },
-    plotOptions: {
-        line: {
-            dataLabels: {
-                enabled: true
-            },
-            enableMouseTracking: false
-        }
-    },
-    series: [{
-        name: 'Reggane',
-        data: [16.0, 18.2, 23.1, 27.9, 32.2, 36.4, 39.8, 38.4, 35.5, 29.2,
-            22.0, 17.8]
-    }, {
-        name: 'Tallinn',
-        data: [-2.9, -3.6, -0.6, 4.8, 10.2, 14.5, 17.6, 16.5, 12.0, 6.5,
-            2.0, -0.9]
-    }]
-});
-      
+  const toggle = ()=> setIsOpen(!isOpen)      
 
   return (
     <header >
@@ -116,9 +76,14 @@ const Header = () => {
              <Link to="/records" className="nav-link">
              <FaFileMedicalAlt/> My Records
              </Link>
-            <Link to="/call" className="nav-link">
+            <a href="http://localhost:3001/" target="_blank" className="nav-link">
             <AiOutlineWechat/> Doc Chat
+            </a>
+
+            <Link to="/call" className="nav-link">
+            <IoMdVideocam/> Call Expert
             </Link>
+
             {/* <Link to="/diabetestest" className="nav-link">
             <MdBloodtype/>Diabetes Test
             </Link> */}
