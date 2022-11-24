@@ -6,7 +6,7 @@ import watch from "../assets/watch.jpeg"
 
 const Profile = () => {
   return (
-    <div className="left d-flex flex-column">
+    <div className="left d-flex flex-column" style={{width:"100%"}}>
 
       {/* <button style={{padding:"10px", marginBottom:"10px", backgroundColor:"#000080" , color:"white", borderRadius:"50px" }}>Connect to Smart Watch</button>
       <img src={watch} alt="" />

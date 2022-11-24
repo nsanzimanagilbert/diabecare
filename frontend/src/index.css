@@ -178,6 +178,11 @@ header{
  
 }
 
+.recipe-card:hover {
+  background-color: rgba(0,0,0,0.7);
+  color:white
+
+
 .landing{
   /* text-transform: none !important; */
 /* height: 100vh; */

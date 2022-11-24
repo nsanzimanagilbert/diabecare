@@ -20,6 +20,8 @@ import LandingScreen from "./screens/LandingScreen";
 import { useDispatch, useSelector } from "react-redux";
 import YogaTraining from "./screens/YogaTraining";
 import RecordsScreen from "./screens/RecordsScreen";
+import RecipeDB from './components/recipeDB';
+import Recipes from './components/Recipes/projects'
 
 
 const App = () => {
@@ -44,6 +46,8 @@ const App = () => {
           {userInfo && <Route path="/" component={HomeScreen} exact />}
           {!userInfo && <Route path="/" component={LandingScreen} exact />}
           <Route path="/dashboard" component={DashboardScreen} exact />
+          <Route path="/recipedb" component={RecipeDB} exact />
+          <Route path="/recipes" component={Recipes} exact />
           <Route path="/yoga-training/:pose" component={YogaTraining} exact />
 
 
