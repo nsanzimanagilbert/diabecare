@@ -8,6 +8,7 @@ const Product = ({ product }) => {
       <div className="card card-product" style={{margin:"30px auto",borderRadius:"40px",padding:"20px",width:"90%"}}>
       <Link to={product.link}>
         <img src={`${product.image}`} style={{padding:"20px",width:"90%",marginBottom:"20px"}} alt="" />
+
         <div className="card-description">
           <h4>{product.name}</h4>
           <p>{product.description}</p>
