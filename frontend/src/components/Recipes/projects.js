@@ -1,6 +1,7 @@
 import "./projects.css";
 import ProjectComponent from "./projectComponent";
 import hg from "../../assets/dish1.jpg";
+import React from 'react'
 
 function Recipes(props) {
   return (

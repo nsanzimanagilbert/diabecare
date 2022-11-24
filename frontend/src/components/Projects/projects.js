@@ -1,6 +1,7 @@
 import "./projects.css";
 import ProjectComponent from "./projectComponent";
 import hg from "../../img/hg.jpg";
+import React from 'react'
 
 function Project(props) {
   return (

@@ -1,5 +1,6 @@
 import "./LandingPage.css";
 import Landing from '../../img/landing.png'
+import React from 'react'
 
 function LandingPage() {
   return (

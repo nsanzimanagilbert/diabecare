@@ -6,6 +6,7 @@ import Dev from "../../img/icons/insta.svg";
 import Codechef from "../../img/icons/Mail.svg";
 import UpArrow from "../../img/icons/UpArrow.svg";
 import DownArrow from "../../img/icons/DownArrow.svg";
+import React from 'react'
 
 function SideButton() {
 	return (

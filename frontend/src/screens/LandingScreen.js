@@ -8,6 +8,7 @@ import Project from "../components/Projects/projects";
 import Blog from "../components/Blog/Blog";
 import Features from "../components/features/features";
 import ReactSpeedometer from "react-d3-speedometer"
+import React from 'react'
 
 
 function LandingScreen() {

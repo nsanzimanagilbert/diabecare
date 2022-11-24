@@ -1,4 +1,6 @@
 import "./features.css";
+import React from 'react'
+
 function FeatureCard(props) {
   return (
     <div className="col-12 col-md-4 my-3 my-md-0">

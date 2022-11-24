@@ -76,7 +76,7 @@ const Header = () => {
              <Link to="/records" className="nav-link">
              <FaFileMedicalAlt/> My Records
              </Link>
-            <Nav.Link href="/records">
+            <Nav.Link href="localhost:4050/sessions">
               {" "}
                 <IoMdVideocam/> Call Expert
             </Nav.Link>

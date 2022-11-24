@@ -1,5 +1,6 @@
 import "./Blog.css";
 import BlogBox from "./BlogBox";
+import React from 'react'
 
 function Blog() {
 	return (
