@@ -14,46 +14,54 @@ const HomeScreen = () => {
   const glucoseList = useSelector((state) => state.glucoseList)
   const {glucose} = glucoseList;
   
-  useEffect(() => {
-    dispatch(listProducts());
-    dispatch(listAllGlucose)
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(listProducts());
+  //   dispatch(listAllGlucose)
+  // }, [dispatch]);
 
   const service = [
     {
-      title: "Diet",
+      name: "Diet",
       description: "Learn the best foods for you",
-      cover: `image`
+      image: '/images/diet.png',
+      link:'/diet'
     },
      {
-      title: "Physical Activity",
+      name: "Physical Activity",
       description: "Excerses to make you fit",
-      cover: `image`
+      image: 'images/exercise.png',
+      link:'/physical-activity'
 
-    },
-     {
-      title: "Glucose Tracker",
-      description: "Know your glucose levels"
     },
     {
-      title: "Glucose Tracker",
+      name: "Glucose Tracker",
       description: "Know your glucose levels",
-      cover: `image`
+      image: 'images/glucose.png',
+      link:'/glucose'
+    },
+    {
+      name: "Mental Health Wellbeing",
+      description: "Track your mental health",
+      image: 'images/mental.jpeg',
+      link:'/glucose'
     }
   ]
-
   return (
     <Container className="page-wrapper">
-      <h2>welcome</h2>
+      <h2 style={{margin:"40px",textTransform:"none"}}>Keep your diabetes in check!</h2>
       {loading ? 
         <Loader/>
        : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <div className="flex flex-center">
-          {products.map((product) => (
+        <div className="container" style={{marginTop:"40px"}}>
+          <div className="row">
+
+            {service.map((product) => (
             <Product key={product._id} product={product} />
           ))}
+          </div>
+          
         </div>
       )}
     </Container>

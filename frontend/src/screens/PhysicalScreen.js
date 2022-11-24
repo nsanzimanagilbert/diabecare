@@ -9,50 +9,57 @@ import Profile from '../components/Profile'
 const PhysicalScreen = () => {
   return (
     <Container>
-        <div className='pageHeader'>
+        <div className='pageHeader' style={{textAlign:"center",marginBottom:"80px"}}>
             <h2>Physical activity</h2>
         </div>
         <div>
             
-          <section className="dashboard d-flex">
-            <Profile/>
-
-            <div className="right">            
-              <h4 className="catalog">Calories Burned!</h4>
-              <hr/>
-
-              <ProgressMap/>
-
-              <h4 className="catalog">Yoga Session</h4>
-              <hr/>
-
-              <div className="scrolling d-flex">
-
-              <Link to='/yoga-training/Tree'>
-                <div className="cardc tree">
-                  <p>Tree Pose
-                  </p>
-                  <p className="min"><br></br></p>
-                  <p className="cardc_des mt-1">Helps in weight loss, increses </p>
-                  <button>Start Session</button>
-                </div>
-              </Link>
-
-              <Link to='/yoga-training/Chair'>
-                <div className="cardc chair">
-                  <p>Chair
-                  </p>
-                  <p className="min"><br></br></p>
-
-                  <p className=" cardc_des mt-1">Helps in weight loss, increses </p>
-
-
-                  <button>Start Session</button>
-                </div>
-                </Link>
+          <section className="dashboard container">
+            <div className="row">
+              <div className="col-md-4">
+              <Profile style={{width:"100%"}}/>
               </div>
+              <div className="col-md-8">
+                <div className="right" style={{width:"100%"}}>            
+                <h4 className="catalog">Calories Burned!</h4>
+                <hr/>
 
-              <div className="mt-3 scrolling d-flex">
+                <ProgressMap />
+
+              </div>
+            </div>
+           
+
+            <h4 className="catalog" style={{margin:"40px",textAlign:"center"}}>Yoga Session</h4>
+                <hr/>
+
+              <div className="flex">
+                
+                  <Link to='/yoga-training/Tree'>
+                    <div className="cardc tree">
+                      <p>Tree Pose
+                      </p>
+                      <p className="min"><br></br></p>
+                      <p className="cardc_des mt-1">Helps in weight loss, increses </p>
+                      <button>Start Session</button>
+                    </div>
+                  </Link>
+                 
+                  <Link to='/yoga-training/Chair'>
+                    <div className="cardc chair">
+                      <p>Chair
+                      </p>
+                      <p className="min"><br></br></p>
+
+                      <p className=" cardc_des mt-1">Helps in weight loss, increses </p>
+
+
+                      <button>Start Session</button>
+                    </div>
+                    </Link>
+                  
+
+              
                 <Link to='/yoga-training/Cobra'>
                   <div className="cobra cardc">
                     <p>Cobra Pose
@@ -77,9 +84,7 @@ const PhysicalScreen = () => {
 
                 
 
-              </div>
-
-              <div className="mt-3 scrolling d-flex">
+             
               <Link to='/yoga-training/Shoulderstand'>
                 <div className="shoulder cardc">
                   <p>Shoulder Stand
@@ -104,8 +109,9 @@ const PhysicalScreen = () => {
               </div>
 
 
-              <h4 className="mt-3 catalog">Exercise Session</h4>
-              <hr/>
+              <h4 className="catalog" style={{margin:"80px 0px 30px 0px",textAlign:"center"}}>Exercise Session</h4>
+                <hr/>
+          
 
               <div className="d-flex">
 
